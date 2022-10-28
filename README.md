@@ -8,7 +8,7 @@ There's three different ways of working with URLs. Building, modifying and appen
 
 Building an URL looks like this:
 
-```
+```swift
 import URLBuilder
 
 let url = URL {
@@ -21,7 +21,7 @@ This produces an URL https://api.themoviedb.org/3
 
 Modifying an URL, given the previous URL, looks like this:
 
-```
+```swift
 let modifiedURL = url.modified {
     Path("4")
 }
@@ -31,7 +31,7 @@ This produces an URL https://api.themoviedb.org/4
 
 Appending to an URL, given the previous URL, looks like this:
 
-```
+```swift
 let appendedURL = modifiedURL.appending {
     Path("configuration")
     Queries {
