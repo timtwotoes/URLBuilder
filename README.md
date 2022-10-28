@@ -9,6 +9,8 @@ There's three different ways of working with URLs. Building, modifying and appen
 Building an URL looks like this:
 
 ```
+import URLBuilder
+
 let url = URL {
     Host("api.themoviedb.org")
     Path("3")
@@ -17,7 +19,7 @@ let url = URL {
 
 This produces an URL https://api.themoviedb.org/3
 
-Modifying an URL, given the previous URL looks like this:
+Modifying an URL, given the previous URL, looks like this:
 
 ```
 let modifiedURL = url.modified {
@@ -27,7 +29,7 @@ let modifiedURL = url.modified {
 
 This produces an URL https://api.themoviedb.org/4
 
-Appending to an URL, given the previous URL looks like this:
+Appending to an URL, given the previous URL, looks like this:
 
 ```
 let appendedURL = modifiedURL.appending {
