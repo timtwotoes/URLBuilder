@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Port of an URL.
 public struct Port: URLComponentsCompatible {
     private let value: Int
     

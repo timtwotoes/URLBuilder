@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Host of an URL.
 public struct Host: URLComponentsCompatible {
     private static let hostRegExPattern = try! NSRegularExpression(pattern: #"^(?:https?://)?(?:[^@\/\n]+@)?(?:www\.)?([^:/?\n]+)"#)
     private let name: String

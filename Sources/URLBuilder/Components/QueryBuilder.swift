@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// DSL for capturing a collection of queries.
 @resultBuilder
 public enum QueryBuilder {
     public static func buildBlock(_ queries: Query...) -> [Query] {

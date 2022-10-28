@@ -7,10 +7,16 @@
 
 import Foundation
 
+
+/// Authentication component of an URL.
 public struct Auth: URLComponentsCompatible {
     private let username: String
     private let password: String
     
+    /// Authentication with username and password
+    /// - Parameters:
+    ///   - username: username of the URL
+    ///   - password: password of the URL
     public init(username: String, password: String) {
         self.username = username
         self.password = password

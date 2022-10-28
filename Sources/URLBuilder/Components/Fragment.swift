@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Fragment of an URL.
 public struct Fragment: URLComponentsCompatible {
     private let value: String
     

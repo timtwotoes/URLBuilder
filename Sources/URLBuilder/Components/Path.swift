@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Path of an URL.
 public struct Path: URLComponentsCompatible {
     internal let value: String
     

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// URLBuilder DSL.
 @resultBuilder
 public enum URLBuilder {
     private static let defaultScheme = "https"
@@ -55,6 +56,9 @@ public enum URLBuilder {
 }
 
 extension URL {
+    
+    /// Construct an URL using URLBuilder DSL.
+    /// - Parameter _:  Block that captures DSL components and builds an URL.
     public init?(@URLBuilder _ content: () -> URL?) {
         if let url = content() {
             self = url

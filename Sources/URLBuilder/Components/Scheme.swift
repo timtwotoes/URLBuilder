@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Scheme of an URL.
 public struct Scheme: URLComponentsCompatible {
     private let value: String
     

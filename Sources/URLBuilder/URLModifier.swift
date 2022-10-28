@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// URLModifier DSL.
 @resultBuilder
 public enum URLModifier {
     public static func buildExpression(_ scheme: Scheme) -> some URLComponentsCompatible {
@@ -44,6 +45,10 @@ public enum URLModifier {
 }
 
 extension URL {
+    
+    /// Modify an URL using URLModifier DSL.
+    /// - Parameter modifier: a modifier that captures the URL components that must be modified.
+    /// - Returns: a new modified URL
     public func modified(@URLModifier _ modifier: () -> [URLComponentsCompatible]) -> URL {
         var components = URLComponents(url: self, resolvingAgainstBaseURL: false)!
         

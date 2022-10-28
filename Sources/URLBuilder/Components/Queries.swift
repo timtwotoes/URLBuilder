@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Collection of queries.
 public struct Queries: URLComponentsCompatible {
     internal let queries: [Query]
     

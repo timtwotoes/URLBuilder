@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// URLAppender DSL.
 @resultBuilder
 public struct URLAppender {
     private let path: Path?
@@ -61,6 +62,10 @@ public struct URLAppender {
 }
 
 extension URL {
+    
+    /// Appending components to an URL using URLAppender DSL.
+    /// - Parameter appender: an appender that captures the components to append to URL.
+    /// - Returns: new URL with the appended components.
     public func appending(@URLAppender _ appender: () -> URLAppender) -> URL {
         return appender().append(to: self)
     }
