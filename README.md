@@ -1,6 +1,6 @@
 # URLBuilder
 
-Adds builder pattern using DSL as an extension on URL.
+Create, modify and append components to an URL, without using URLComponents, in a more natural way. 
 
 ## Usage
 
