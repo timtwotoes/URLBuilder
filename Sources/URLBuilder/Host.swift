@@ -12,8 +12,7 @@ public struct Host: URLComponentsCompatible {
     private let name: String
 
     private static func extractHost(from string: String) -> String {
-        let range = NSRange(string.startIndex..<string.endIndex, in: string)
-        if let match = hostRegExPattern.firstMatch(in: string, range: range) {
+        if let match = hostRegExPattern.firstMatch(in: string) {
             if let hostRange = Range(match.range(at: 1), in: string) {
                 return String(string[hostRange])
             } else {
@@ -30,5 +29,12 @@ public struct Host: URLComponentsCompatible {
     
     public func update(_ components: inout URLComponents) {
         components.host = name
+    }
+}
+
+extension NSRegularExpression {
+    func firstMatch(in string: String) -> NSTextCheckingResult? {
+        let range = NSRange(string.startIndex..<string.endIndex, in: string)
+        return self.firstMatch(in: string, range: range)
     }
 }
