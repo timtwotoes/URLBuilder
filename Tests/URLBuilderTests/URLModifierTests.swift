@@ -2,7 +2,7 @@
 //  URLModifierTests.swift
 //  
 //
-//  Created by Tim on 24/10/2022.
+//  Created by Tim Wolff on 24/10/2022.
 //
 
 import XCTest
@@ -25,7 +25,7 @@ final class URLModifierTests: XCTestCase {
         }, URL(string: "http://username:password@example.com:80/path?lang=en#here"))
         
         XCTAssertEqual(testURL.modified {
-            Auth(username: "john", password: "doe")
+            Authentication(username: "john", password: "doe")
         }, URL(string: "https://john:doe@example.com:80/path?lang=en#here"))
 
         XCTAssertEqual(testURL.modified {

@@ -2,7 +2,7 @@
 //  Scheme.swift
 //
 //
-//  Created by Tim on 19/10/2022.
+//  Created by Tim Wolff on 19/10/2022.
 //
 
 import Foundation
@@ -16,7 +16,7 @@ public enum URLBuilder {
         return scheme
     }
     
-    public static func buildExpression(_ auth: Auth) -> some URLComponentsCompatible {
+    public static func buildExpression(_ auth: Authentication) -> some URLComponentsCompatible {
         return auth
     }
     

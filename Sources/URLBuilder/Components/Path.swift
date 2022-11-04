@@ -2,7 +2,7 @@
 //  Path.swift
 //  
 //
-//  Created by Tim on 23/10/2022.
+//  Created by Tim Wolff on 23/10/2022.
 //
 
 import Foundation

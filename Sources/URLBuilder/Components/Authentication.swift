@@ -1,15 +1,15 @@
 //
-//  Auth.swift
+//  Authentication.swift
 //  
 //
-//  Created by Tim on 19/10/2022.
+//  Created by Tim Wolff on 19/10/2022.
 //
 
 import Foundation
 
 
 /// Authentication component of an URL.
-public struct Auth: URLComponentsCompatible {
+public struct Authentication: URLComponentsCompatible {
     private let username: String
     private let password: String
     
