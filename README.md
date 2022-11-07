@@ -1,8 +1,8 @@
 # URLBuilder
 
-Create, modify and append components to an URL, without using URLComponents, in a more natural way. 
+Create, modify and append components to an URL in a declarative style. URLRequest can also be created and modified in a declarative style. 
 
-## Usage
+## URL usage
 
 There's three different ways of working with URLs. Building, modifying and appending.
 
@@ -17,7 +17,7 @@ let url = URL {
 }
 ```
 
-This produces an URL https://api.themoviedb.org/3
+This produces the URL https://api.themoviedb.org/3
 
 Modifying an URL, given the previous URL, looks like this:
 
@@ -27,7 +27,7 @@ let modifiedURL = url.modified {
 }
 ```
 
-This produces an URL https://api.themoviedb.org/4
+This produces the URL https://api.themoviedb.org/4
 
 Appending to an URL, given the previous URL, looks like this:
 
@@ -40,6 +40,10 @@ let appendedURL = modifiedURL.appending {
 }
 ```
 
-This produces an URL https://api.themoviedb.org/4/configuration?lang=en
+This produces the URL https://api.themoviedb.org/4/configuration?lang=en
+
+## URLRequest usage
+
+
 
 See documentation for more information.

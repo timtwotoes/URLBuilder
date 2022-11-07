@@ -30,7 +30,7 @@ public enum URLRequestModifier {
     }
 }
 
-public struct URLWrapper: URLRequestCompatible {
+private struct URLWrapper: URLRequestCompatible {
     private let url: URL
     
     public init(_ url: URL) {

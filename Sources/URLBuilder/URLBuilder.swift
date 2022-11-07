@@ -50,7 +50,11 @@ public enum URLBuilder {
             components.scheme = defaultScheme
         }
         
-        return components.host == nil ? nil : components.url
+        if let host = components.host {
+            return host.isEmpty ? nil : components.url
+        } else {
+            return nil
+        }
     }
     
 }
