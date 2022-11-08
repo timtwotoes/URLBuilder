@@ -56,7 +56,6 @@ public enum URLBuilder {
             return nil
         }
     }
-    
 }
 
 extension URL {
