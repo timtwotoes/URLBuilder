@@ -70,16 +70,4 @@ extension URL {
             return nil
         }
     }
-    
-    public init(_ components: any URLComponentsCompatible) {
-        var urlComponents = URLComponents()
-        
-        components.update(&urlComponents)
-
-        guard let url = urlComponents.url else {
-            fatalError("\(urlComponents.description) does not produce a valid URL")
-        }
-        
-        self = url
-    }
 }
